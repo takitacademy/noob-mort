@@ -19,6 +19,9 @@ body{
     color: blue;
     background: white;
 }
+#openMenu, #closeMenu{
+    display: none;
+}
 .main-nav h1{
     font-size: 20px;
 }
@@ -31,6 +34,7 @@ body{
     text-decoration: none;
     font-size: 12px;
     letter-spacing: 1px;
+    color: blue;
 }
 .main-nav a:hover{
     font-weight: bold;
@@ -192,4 +196,59 @@ main{
 }
 .rate>div{
     margin: 1rem 2rem 1rem 0;
+}
+
+/* MEDIA Qz */
+@media(max-width:768px){
+    body{
+        width: 90%;
+    }
+    .main-nav{
+        position: relative;
+    }
+    .main-nav h1{
+        font-size: 16px;
+    }
+    .menu{
+        background: rgb(226, 222, 222);
+        height: 50vh;
+        width: 30vw;
+        position: absolute;
+        top: 0;
+        left: 75%;
+        display: none;
+    }
+    .menu ul{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        padding-left: 1rem;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #closeMenu{
+        padding: 5px 1rem;
+        margin-left: 60%;
+    }
+    .menu ul li{
+        padding: 10px;
+    }
+    
+    #openMenu, #closeMenu{
+        display: block;
+    }
+    .showcase h3{
+        letter-spacing: 1px;
+    }
+    .showcase p{
+        margin-top: 1rem;
+        letter-spacing: 1px;
+    }
+    main{
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .bottom{
+        display: none;
+    }
 }
