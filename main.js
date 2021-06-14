@@ -27,7 +27,7 @@ slider.addEventListener('input', function(){
     slider.style.background = color;
     slider_2.style.background = color;
     document.getElementById('val').innerHTML = `${x}`;
-    document.getElementById('val_2').innerHTML = `${y}`;
+    //document.getElementById('val_2').innerHTML = `${y}`;
 })
 
 slider_2.addEventListener('input', function(){
@@ -36,7 +36,7 @@ slider_2.addEventListener('input', function(){
     var color = `linear-gradient(90deg, blue ${x}%, gray ${x}%)`;
     slider.style.background = color;
     slider_2.style.background = color;
-    document.getElementById('val').innerHTML = `${y}`;
+    //document.getElementById('val').innerHTML = `${y}`;
     document.getElementById('val_2').innerHTML = `${x}`;
 })
 
