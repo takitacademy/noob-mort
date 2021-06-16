@@ -1,28 +1,28 @@
+//DECLARING VARIABLES
 var slider = document.getElementById('slider');
 var slider_2 = document.getElementById('slider_2');
 var totalPay = document.getElementById('totalPay');
 var openMenu = document.getElementById('openMenu');
 var closeMenu = document.getElementById('closeMenu');
 var menu = document.querySelector('.menu');
+var fixed_1 = document.getElementById('fixed-1');
+var fixed_2 = document.getElementById('fixed-2');
 
+//HAMBURGER MENU
 openMenu.addEventListener('click', function(){
     menu.style.display = 'block';
 });
 closeMenu.addEventListener('click', function(){
-    menu.style.display = 'none'
+    menu.style.display = 'none';
 })
 
 //var output = document.getElementById('value');
-
 //output.innerHTML = slider.value;
 
-//slider.oninput = function(){
-//    output.innerHTML = this.value
-//}
-
+//SLIDER
 slider.addEventListener('input', function(){
     var x = slider.value;
-    var y = x * 5 / 100;
+    //var y = x * 5 / 100;
     var color = `linear-gradient(90deg, blue ${x}%, gray ${x}%)`;
     slider.style.background = color;
     slider_2.style.background = color;
@@ -32,7 +32,7 @@ slider.addEventListener('input', function(){
 
 slider_2.addEventListener('input', function(){
     var x = slider_2.value;
-    var y = x * 100 / 5;
+    //var y = x * 100 / 5;
     var color = `linear-gradient(90deg, blue ${x}%, gray ${x}%)`;
     slider.style.background = color;
     slider_2.style.background = color;
@@ -40,6 +40,16 @@ slider_2.addEventListener('input', function(){
     document.getElementById('val_2').innerHTML = `${x}`;
 })
 
+//GETTING THE PERIOD OF PAYMENT
+fixed_1.oninput = function(){
+    console.log(this.value)
+}
+fixed_2.oninput = function(){
+    console.log(this.value)
+}
+
+
+//APPLYING MORTGAGE FORMULAS
 const totalPayment = () =>{
     var p = slider.value;
     var r = 0.00354 ;
